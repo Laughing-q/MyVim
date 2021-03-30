@@ -39,8 +39,8 @@ noremap L 5l
 
 map sl :set splitright<CR>:vsplit<CR>
 map sh :set nosplitright<CR>:vsplit<CR>
-map sk :set splitbelow<CR>:split<CR>
-map sj :set nosplitbelow<CR>:split<CR>
+map sj :set splitbelow<CR>:split<CR>
+map sk :set nosplitbelow<CR>:split<CR>
 
 map <LEADER>l <C-w>l
 map <LEADER>h <C-w>h
@@ -185,3 +185,26 @@ let g:NERDTreeIndicatorMapCustom = {
 " === Taglist
 " ===
 map <silent> T :TagbarOpenAutoClose<CR>
+
+" ===
+" === Python-syntax
+" ===
+let g:python_highlight_all = 1
+" let g:python_slow_sync = 0
+
+" ===
+" === vim-indent-guide
+" ===
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_color_change_percent = 1
+silent! unmap <LEADER>ig
+autocmd WinEnter * silent! unmap <LEADER>ig
+
+
+
+" ===
+" === Goyo
+" ===
+map <LEADER>gy :Goyo<CR>
