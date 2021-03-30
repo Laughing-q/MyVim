@@ -1,6 +1,23 @@
 let mapleader=" "
 set nocompatible
+filetype on
+filetype indent on 
+filetype plugin on 
+filetype plugin indent on
+set encoding=utf-8
+let &t_ut=''
 
+set list
+set listchars=tab:▸\ ,trail:▫
+set scrolloff=5
+set tw=0
+set indentexpr=
+set backspace=indent,eol,start
+set foldmethod=indent
+set foldlevel=99
+set laststatus=2
+set autochdir
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 set number
 set wildmenu
@@ -141,3 +158,30 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 "let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 "let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
+
+" ===
+" === ale
+" ===
+let b:ale_linters = ['pylint']
+let b:ale_fixers = ['autopep8', 'yapf']
+
+" ==
+" == NERDTree-git
+" ==
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
+
+
+" ===
+" === Taglist
+" ===
+map <silent> T :TagbarOpenAutoClose<CR>
