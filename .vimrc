@@ -31,21 +31,30 @@ exec "nohlsearch"
 set cursorline
 syntax on
 
-noremap H 5h
-noremap J 5j
-noremap K 5k
+noremap i k
+noremap k j
+"noremap l l
+noremap j h
+
+noremap h i
+noremap H I
+
+noremap I 5k
+noremap K 5j
+noremap J 5h
 noremap L 5l
 
 
+
 map sl :set splitright<CR>:vsplit<CR>
-map sh :set nosplitright<CR>:vsplit<CR>
-map sj :set splitbelow<CR>:split<CR>
-map sk :set nosplitbelow<CR>:split<CR>
+map sj :set nosplitright<CR>:vsplit<CR>
+map sk :set splitbelow<CR>:split<CR>
+map si :set nosplitbelow<CR>:split<CR>
 
 map <LEADER>l <C-w>l
-map <LEADER>h <C-w>h
-map <LEADER>j <C-w>j
-map <LEADER>k <C-w>k
+map <LEADER>i <C-w>k
+map <LEADER>k <C-w>j
+map <LEADER>j <C-w>h
 
 map s <nop>
 map S :w<CR>
