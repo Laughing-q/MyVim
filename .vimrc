@@ -52,7 +52,6 @@ map J <C-w>h
 map s <nop>
 map S :w<CR>
 map Q :q<CR>
-map ; :
 
 map <up> :res +5<CR>
 map <down> :res -5<CR>
